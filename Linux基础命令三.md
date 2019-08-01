@@ -982,3 +982,47 @@ lsattr    显示特殊权限
 
 ```
 
+
+
+
+
+#### 练习
+
+```shell
+1、简述软链接、硬链接、cp的区别？
+	软链接：创建一个快捷方式，源文件发生改变，目标文件也发生相应改变。可以跨分区创建。删除源文件，目标文件则无法打开。可以对目录做软链接。
+	硬链接：源文件和目标文件指向一个硬盘空间且引用次数+1，源文件变化，目标文件也发生相应改变。不可以跨分区创建。删除源文件，目标文件可以打开且引用次数-1。不能对目录做软链接。
+	
+2、新建如下目录，一条命令创建
+/mnt/
+├── bin
+├── boot
+├── dev
+├── etc
+│   ├── network
+│   ├── ssh
+│   │   └── sshd_config
+│   └── sysconfig
+└── sbin
+mkdir -p mnt/{bin,boot,dev,sbin} mnt/etc/{network,ssh,sysconfig} mnt/etc/ssh/sshd_config
+
+[root@MyHost test]# mkdir -pv mnt/{bin,boot,dev,etc/{network,ssh/sshd_config,sysconfig},sbin}
+
+
+3.有a.txt文件，内容如下：
+|abc|
+|bcd|
+|dasdsa|
+|asdad|
+输出如下内容
+,abc,bcd,dasdsa,asdad,
+
+tr -s '|\n|' ',' < a.txt
+
+4.执行ps -ef命令，其中第一行为用户信息，请统计出每个用户出现的次数
+ps -ef|cut -d ' ' -f1|sort|uniq -c
+
+5.在第4题的基础上，统计出出现最多一个用户
+ps -ef|cut -d ' ' -f1|sort|uniq -c|sort -n|tail -1
+```
+

@@ -175,7 +175,7 @@ You have new mail in /var/spool/mail/root
 
 - ctrl+q 解开锁定
 
-- ctrl+c 总结命令
+- ctrl+c 终止命令
 
 - ctrl+e 移动到行尾，相当于end
 
@@ -190,8 +190,6 @@ You have new mail in /var/spool/mail/root
 - alt+r 删除整行
 
   
-
-
 
 #### 帮助信息
 
