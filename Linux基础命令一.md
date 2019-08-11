@@ -96,10 +96,14 @@
 
 - 配置主机名
 
-  ```
+  ```shell
   一般情况下主机名配置文件中etc目录的hosts文件中
-  1、阿里云服务器中的主机名配置文件在/etc/hostname/中：vim /etc/hostname/
-     修改后，reboot重启
+  1、阿里云服务器中的主机名配置文件在/etc/hostname/中：vim /etc/hostname/ 
+     修改后，reboot重启  #永久有效
+     
+  2、方式二：[root@localhost ~]\# hostaname wang   #但是重启后失效
+  
+  3、方式三：[root@localhost ~]\#hostnamectl set-hostname li  # 永久有效
   ```
 
 

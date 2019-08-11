@@ -768,47 +768,44 @@ Usage: cp [OPTION]... [-T] SOURCE（源文件） DEST（目标文件）
   
   cp  --backup=numbered 1.cfg 2.cfg 覆盖文件，备份文件添加上数字
   -p 保留原来的属性
-  
+  -n 表示有目标文件就不用覆盖
+    [root@MyHost ~]# echo adfadfadf >> bb10
+    [root@MyHost ~]# cat bb10
+    adfadfadf
+    [root@MyHost ~]# echo ad >> bb11
+    [root@MyHost ~]# cp -n bb10 bb11
+    [root@MyHost ~]# cat bb11
+    ad
   ```
 
--n 表示有目标文件就不用覆盖
-  [root@MyHost ~]# echo adfadfadf >> bb10
-  [root@MyHost ~]# cat bb10
-  adfadfadf
-  [root@MyHost ~]# echo ad >> bb11
-  [root@MyHost ~]# cp -n bb10 bb11
-  [root@MyHost ~]# cat bb11
-  ad
-  ```
-  
-  
+
 
 #### 移动或者重命名
 
 - ##### 常用操作
 
-  ```shell
-  Usage: mv [OPTION]... [-T] SOURCE DEST
-    or:  mv [OPTION]... SOURCE... DIRECTORY
-    or:  mv [OPTION]... -t DIRECTORY SOURCE...
-  -i  交互式
-  -f  强制
-  -b  覆盖前做备份
-  -v 显示进度
-  
-  [root@MyHost test]# mv ../a5 .   # 将父目录下的a5移动到当前目录
-  mv: overwrite ‘./a5’? y
-  
-  [root@MyHost test]#mv 11 22     # 重命名
-  [root@MyHost test]#ll
-  -rw-r--r-- 1 root root    0 Jul 30 22:52 22
-  
-  [root@MyHost test]#mv -f 3 22   # 强制覆盖
-  
-  [root@MyHost test]#mv -b 5 22   # 覆盖前备份
-  mv: overwrite ‘22’? y
-  [root@MyHost test]#ll
-  -rw-r--r-- 1 root root    0 Jul 30 22:00 22~
+  ```python
+    Usage: mv [OPTION]... [-T] SOURCE DEST
+      or:  mv [OPTION]... SOURCE... DIRECTORY
+      or:  mv [OPTION]... -t DIRECTORY SOURCE...
+    -i  交互式
+    -f  强制
+    -b  覆盖前做备份
+    -v 显示进度
+    
+    [root@MyHost test]# mv ../a5 .   # 将父目录下的a5移动到当前目录
+    mv: overwrite ‘./a5’? y
+    
+    [root@MyHost test]#mv 11 22     # 重命名
+    [root@MyHost test]#ll
+    -rw-r--r-- 1 root root    0 Jul 30 22:52 22
+    
+    [root@MyHost test]#mv -f 3 22   # 强制覆盖
+    
+    [root@MyHost test]#mv -b 5 22   # 覆盖前备份
+    mv: overwrite ‘22’? y
+    [root@MyHost test]#ll
+    -rw-r--r-- 1 root root    0 Jul 30 22:00 22~
   ```
 
   
