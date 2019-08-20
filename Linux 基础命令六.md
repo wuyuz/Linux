@@ -844,6 +844,20 @@ $release 系统版本
 $basearch 架构
 ```
 
+- yum 的另一种添加仓库的方式
+
+  ```shel
+  添加yum仓库：
+  yum-config-manager --add-repo repository_url
+  启用仓库源：
+  yum-config-manager --enable repository…
+  禁用仓库更新源：
+  yum-config-manager --disable repository…
+  查看已安装的仓库源列表：
+  yum repolist all
+  ```
+
+  
 
 
 ##### yum 命令行选项
