@@ -2,7 +2,7 @@
 
 
 
-![1564651430441](C:\Users\RootUser\Desktop\知识点复习\Django\gif\1564651430441.png)
+![1564651430441](C:\Users\wanglixing\Desktop\知识点复习\Django\gif\1564651430441.png)
 
 
 
@@ -53,7 +53,7 @@ E142: File not written: Writing is disabled by 'write' option
 
 - 可视化模式：
 
-  ![1564653593701](C:\Users\RootUser\Desktop\知识点复习\Django\gif\1564653593701.png)
+  ![1564653593701](C:\Users\wanglixing\Desktop\知识点复习\Django\gif\1564653593701.png)
 
 #### 模式切换
 
@@ -548,5 +548,5 @@ E142: File not written: Writing is disabled by 'write' option
 
 
 
-![vimALL](C:\Users\RootUser\Desktop\知识点复习\Django\gif\vimALL-1564669804796.png)
+![vimALL](C:\Users\wanglixing\Desktop\知识点复习\Django\gif\vimALL-1564669804796.png)
 

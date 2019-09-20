@@ -445,7 +445,7 @@ root
 
 #### 文件的权限
 
-![1564579312494](C:\Users\RootUser\Desktop\知识点复习\Django\gif\1564579312494.png)
+![1564579312494](C:\Users\wanglixing\Desktop\知识点复习\Django\gif\1564579312494.png)
 
 - ##### 文件属性操作
 

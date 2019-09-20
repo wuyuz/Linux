@@ -252,7 +252,7 @@ You have new mail in /var/spool/mail/root
 
 #### 目录结构
 
-![1564490927647](C:\Users\RootUser\Desktop\知识点复习\Django\gif\1564490927647.png)
+![1564490927647](C:\Users\wanglixing\Desktop\知识点复习\Django\gif\1564490927647.png)
 
 - 目录结构是一个倒置的树
 - 目录从"/" 开始
