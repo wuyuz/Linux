@@ -238,6 +238,10 @@ scp  pengpeng@ip:tmp/支付宝密码.txt  /tmp/
    4. 进入sbin目录,启动nginx
 
    ```python
+   设置环境变量：
+   [root@MyHost sbin]# vim /etc/profile
+   [root@MyHost sbin]# source /etc/profile
+   
    ./nginx  
    ./nginx -s stop 停止nginx
    ./nginx -t  检查nginx.conf的语法是否正确
@@ -249,6 +253,10 @@ scp  pengpeng@ip:tmp/支付宝密码.txt  /tmp/
 1. 找到nginx.conf,学习语法
 
    ```python
+   [root@MyHost conf]# pwd
+   /opt/s21/tngx/conf
+   [root@MyHost conf]# vim nginx.conf
+   
    #这里的所有配置是nginx的核心功能
    http {
    
@@ -377,7 +385,7 @@ scp  pengpeng@ip:tmp/支付宝密码.txt  /tmp/
 
 #### 4.3 nginx负载均衡
 
-1. 准备好2台资源服务器,本应该提供一样的数据,进行负载均衡,实验目的,看到不同的页面,所以准备不同的页面数据
+1. 准备好2台资源服务器、1台负载均衡服务器,本应该提供一样的数据,进行负载均衡,实验目的,看到不同的页面,所以准备不同的页面数据
    - 192.168.182.131  资源服务器1  ,返回alex的页面 
    - 192.168.182.132  资源服务器2 ,返回武大郎的页面
 
@@ -388,13 +396,13 @@ scp  pengpeng@ip:tmp/支付宝密码.txt  /tmp/
    	#默认轮询方式
    	upstream mys21django  {
    		server 192.168.182.131;
-   		server 192.168.182.132;                                                                    
+   		server 192.168.182.132;                                                      
    	}
    	
    	#权重方式
    		upstream mys21django  {
    		server 192.168.182.131	weight=4;
-   		server 192.168.182.132   weight=1;                                                                    
+   		server 192.168.182.132   weight=1;                                     
    	}
    
    	#ip哈希方式,根据用户的来源ip计算出哈希值,永远只指派给一个服务器去解析
@@ -440,8 +448,8 @@ scp  pengpeng@ip:tmp/支付宝密码.txt  /tmp/
    3. 激活一个虚拟环境去使用
 
    ```python
-   source s21Django1/bin/activate  #激活
    virtualenv --no-site-packages --python=python3   s21uwsgi   #这是创建虚拟环境
+   source s21Django1/bin/activate  #激活
    ```
 
 2. 使用uwsgi的命令,参数形式启动  crm项目
