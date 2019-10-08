@@ -515,7 +515,7 @@ http
 
 #### 虚拟主机
 
-![1570086810590](C:\Users\wanglixing\Desktop\知识点复习\Linux\1570086810590.png)
+![1570455577361](C:\Users\wanglixing\Desktop\知识点复习\Linux\Nginx入门与实战.assets\1570455577361.png)
 
 ​	如果每台linux服务器只运行了一个小网站，那么人气低，流量小的草根站长需要承担高额的服务器租赁费，也造成了硬件资源浪费。虚拟主机就是将一台服务器分割成多个“虚拟服务器”，每个站点使用各自的硬盘空间，由于省资源，省钱，众多网站都使用虚拟主机来部署网站。
 
@@ -545,7 +545,7 @@ Nginx支持多个server{}标签，即支持多个虚拟主机站点。
 ./sbin/nginx -s reload
 ```
 
-![1570086994637](C:\Users\wanglixing\AppData\Roaming\Typora\typora-user-images\1570086994637.png)
+![1570455591476](C:\Users\wanglixing\Desktop\知识点复习\Linux\Nginx入门与实战.assets\1570455591476.png)
 
 #### 案例演示
 
