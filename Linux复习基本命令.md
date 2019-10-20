@@ -54,7 +54,7 @@ cd -
 显示文件或文件系统的状态。
 #用法 stat  [参数]  文件
 参数列表：
--L, --dereference     跟随链接
+  -L, --dereference     跟随链接
   -f, --file-system     显示文件系统状态而非文件状态
   -c --format=格式      使用指定输出格式代替默认值，每用一次指定格式换一新行
       --printf=格式     类似 --format，但是会解释反斜杠转义符，不使用换行作
@@ -448,8 +448,6 @@ scp root@192.168.1.155:/home/oldboy.txt /tmp/oldboy.txt
 scp -r root@192.168.1.155:/home/oldboy /home/
 ```
 
-
-
 #### du命令
 
 Linux du命令用于显示目录或文件的大小。
@@ -469,8 +467,6 @@ du
 #显示/home的总大小
 du -sh /home
 ```
-
-
 
 #### top命令
 
@@ -529,8 +525,6 @@ date +"%Y-%m-%d"
 date +"%Y-%m-%d %T"
 ```
 
-
-
 #### wget命令
 
 ```
@@ -538,8 +532,6 @@ wget命令用于在终端下载网络文件
 参数是 wget [参数] 下载地址
 wget -r -p http://www.luffycity.com#递归下载路飞所有资源，保存到www.luffycity.com文件中
 ```
-
-
 
 Linux的网络功能相当强悍，一时之间我们无法了解所有的网络命令，在配置服务器基础环境时，先了解下网络参数设定命令。
 
@@ -554,8 +546,6 @@ vim /etc/sysconfig/network-scripts/ifcfg-eth0
 #修改配置参数
 ONBOOT=yes
 ```
-
-
 
 #### 网卡配置文件详解
 
@@ -580,8 +570,6 @@ ifup,ifdown命令：
     ifup eth0
     ifdown eth0
 ```
-
-
 
 #### ifconfig命令
 
@@ -614,8 +602,6 @@ x86_64
 #查看内核所有信息
 uname -a
 ```
-
-
 
 #### 用户管理
 
@@ -773,11 +759,9 @@ chgrp
 -rw-rw-r-- 1 root root 0 8月  11 16:41 pyyu.txt
 ```
 
-
-
 #### 修改权限的命令
 
-hmod
+chmod
 
 ```
 chmod [身份]　　 [参数] 　　[文件]　　　　u(user)　　 +(添加)　　　　　　g(group)　  -(减去)　　　　o(other)　　=(赋值)　　　　a(all)
@@ -1128,7 +1112,7 @@ MAILTO=root
 30 21 * * * 命令
 #没周六、日的1：30执行命令
 30 1 * * 6,0 命令
-#每周一到周五的凌晨1点，清空/tmp目录的所有文件
+#每周一到周五的凌晨1点，清空/tmp目录的所有文件
 0 1 * * 1-5 /usr/bin/rm -rf /tmp/*
 #每晚的21:30重启nginx
 30 21 * * * /opt/nginx/sbin/nginx -s reload
