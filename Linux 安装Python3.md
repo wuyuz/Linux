@@ -114,4 +114,9 @@
   [root@MyHost python3]#ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3
   ```
 
-  
+
+
+
+deepin 安装python
+
+ https://blog.csdn.net/little_insect_0/article/details/82142435 
